@@ -361,3 +361,14 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Zenject-Editor.csproj
+/Zenject-IntegrationTests-Editor.csproj
+/Zenject-IntegrationTests.csproj
+/Zenject-PoolMonitor-Editor.csproj
+/Zenject-ReflectionBaking-Editor.csproj
+/Zenject-TestFramework.csproj
+/Zenject-UnitTests-Editor.csproj
+/Zenject.csproj
+/Assets/Plugins/Zenject
+/Temp
+/Library
