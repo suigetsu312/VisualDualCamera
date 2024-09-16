@@ -11,7 +11,6 @@ public class GameInstaller : MonoInstaller
     {
         Container.Bind<GameObjectTools >().AsSingle();
         Container.Bind<DualCamera>().FromComponentInHierarchy().AsSingle();
-
         Container.Bind<DataSender>().FromComponentInHierarchy().AsSingle();
 
 
