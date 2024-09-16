@@ -10,7 +10,10 @@ public class GameInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<GameObjectTools >().AsSingle();
-        Container.Bind<DualCamera >().AsSingle();
+        Container.Bind<DualCamera>().FromComponentInHierarchy().AsSingle();
+
+        Container.Bind<DataSender>().FromComponentInHierarchy().AsSingle();
+
 
     }
 

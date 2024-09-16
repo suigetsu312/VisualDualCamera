@@ -8,8 +8,9 @@ using UnityEngine.UIElements;
 using System;
 public class DualCamera : MonoBehaviour
 {
-
+    [SerializeField]
     public Camera LeftCamera;
+    [SerializeField]
     public Camera RightCamera;
     private RenderTexture _renderTexture;
 
@@ -24,8 +25,18 @@ public class DualCamera : MonoBehaviour
         _renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
     }
 
-    public CameraPayload GetDualCameraParameter(Camera cam)
+    public DualCameraPayload GetDualCameraParameter()
     {
+        var l = GetCameraParameter(LeftCamera);
+        var r = GetCameraParameter(RightCamera);
+        Debug.Log(LeftCamera == null);
+        if(l == null || r == null) { return null; }
+        return new DualCameraPayload() { Left = l, Right = r };
+    }
+
+    private CameraPayload GetCameraParameter(Camera cam)
+    {
+        if(cam == null) { return null; }
         var rawImage = CaptureImageFromRenderTexture();
         string imgBase64String = Convert.ToBase64String(rawImage);  // ½s½X¬° Base64 ¦r²Å¦ê
         
@@ -61,8 +72,8 @@ public class DualCamera : MonoBehaviour
     {
         if (LeftCamera != null && RightCamera != null)
         {
-            Debug.Log($"L: {GetDualCameraParameter(LeftCamera).IntrinsicParameter}");
-            Debug.Log($"R: {GetDualCameraParameter(RightCamera).IntrinsicParameter}");
+            Debug.Log($"L: {GetDualCameraParameter().Left.IntrinsicParameter}");
+            Debug.Log($"R: {GetDualCameraParameter().Right.IntrinsicParameter}");
         }
     }
 }

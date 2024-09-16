@@ -56,10 +56,12 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Manager\DataSender.cs" />
+    <Compile Include="Assets\Script\Installer\GameInstaller.cs" />
     <Compile Include="Assets\Script\DualCamera.cs" />
     <Compile Include="Assets\Script\Model\CameraPayload.cs" />
     <Compile Include="Assets\Script\Tools\GameObjectTools.cs" />
-    <Compile Include="Assets\Script\Installer\GameInstaller.cs" />
+    <Compile Include="Assets\Script\Model\DualCameraPayload.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
