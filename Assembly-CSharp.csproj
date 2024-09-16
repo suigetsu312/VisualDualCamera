@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{E1CE1FEE-67BE-6533-73AA-CC578BE80DCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -56,8 +57,8 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Installer\GaameInstaller.cs" />
     <Compile Include="Assets\Script\Manager\DataSender.cs" />
-    <Compile Include="Assets\Script\Installer\GameInstaller.cs" />
     <Compile Include="Assets\Script\DualCamera.cs" />
     <Compile Include="Assets\Script\Model\CameraPayload.cs" />
     <Compile Include="Assets\Script\Tools\GameObjectTools.cs" />
